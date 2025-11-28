@@ -20,7 +20,7 @@
 
 <div align="center">
 
-### [🌐 Clique aqui para ver a Versão Online](https://jade-paz.github.io/RA/modelos.html)
+### [🌐 Clique aqui para ver a Versão Online](https://jade-paz.github.io/RA/index.html)
 
 </div>
 
