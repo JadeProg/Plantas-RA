@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Plantas 3D – AR</title>
+
+<!-- CSS EXTERNO -->
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div id="startScreen">
+
+  <div class="center-content">
+    <h1>Plantas em AR</h1>
+
+    <p>Visualize plantas em modelos 3D e veja como ficariam no seu ambiente usando Realidade Aumentada.</p>
+
+    <!-- CARROSSEL -->
+    <div class="carousel-container" id="carousel">
+      <div class="carousel-track">
+
+        <div class="marker-card">
+          <p class="marker-title">Veja diferentes modelos</p>
+          <div class="marker-frame"><img src="assets/plant.png" class="marker-img"></div>
+        </div>
+
+        <div class="marker-card">
+          <p class="marker-title">Aponte a câmera para uma área plana</p>
+          <div class="marker-frame"><img src="assets/plant1.png" class="marker-img"></div>
+        </div>
+
+        <div class="marker-card">
+          <p class="marker-title">Visualize em vários ambientes</p>
+          <div class="marker-frame"><img src="assets/plant3.png" class="marker-img"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PONTINHOS -->
+    <div class="dots" id="dots">
+      <div class="dot active"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+
+    <button id="startBtn">Explorar Plantas</button>
+  </div>
+
+</div>
+
+<script>
+  const carousel = document.getElementById("carousel");
+  const dots = document.querySelectorAll(".dot");
+  const cards = document.querySelectorAll(".marker-card");
+
+  function updateDots() {
+    const scrollPos = carousel.scrollLeft;
+    let cardWidth = cards[0].offsetWidth + 16;
+
+    let index = Math.round(scrollPos / cardWidth);
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === index);
+    });
+  }
+
+  carousel.addEventListener("scroll", updateDots);
+
+  document.getElementById("startBtn").addEventListener("click", function () {
+    window.location.href = "modelos.html";
+  });
+</script>
+
+</body>
+</html>

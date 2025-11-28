@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>Jardim AR – Escolha sua Planta</title>
+
+<!-- model-viewer com AR -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+
+  <button id="backBtn" class="nav-btn" onclick="window.location.href='index.html'">← Voltar</button>
+
+  <header>
+    <h1>Modelos 3D</h1>
+    <p class="subtitle">Deslize para escolher seu modelo</p>
+  </header>
+
+  <!-- ==================== -->
+  <!-- PLANTAS DE INTERIOR -->
+  <!-- ==================== -->
+  <div class="category-title">Plantas de Interior</div>
+  <div class="carousel-container">
+    
+    <!-- Card: Monstera -->
+    <div class="plant-card">
+      <div class="model-preview">
+        <model-viewer
+          src="assets/monstera.glb"
+          auto-rotate
+          camera-controls
+          ar
+          ar-modes="scene-viewer webxr quick-look"
+          interaction-prompt="auto"
+          touch-action="pan-y"
+          ar-scale="auto"
+          ar-placement="floor"
+          enable-pan
+          shadow-intensity="1"
+          exposure="1.1"
+          environment-image="neutral">
+        </model-viewer>
+      </div>
+      <div class="card-info">
+        <div class="card-title">Costela-de-Adão</div>
+        <div class="card-desc">Folhagem tropical exuberante.</div>
+        <div class="btn-row">
+          <button class="btn-details" onclick="openModal('monstera')">Ver Detalhes</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card: Dracena -->
+    <div class="plant-card">
+      <div class="model-preview">
+        <model-viewer
+          src="assets/indoor_plant.glb"
+          auto-rotate
+          camera-controls
+          ar
+          ar-modes="scene-viewer webxr quick-look"
+          interaction-prompt="auto"
+          touch-action="pan-y"
+          ar-scale="auto"
+          ar-placement="floor"
+          enable-pan
+          shadow-intensity="1"
+          exposure="1.1"
+          environment-image="neutral">
+        </model-viewer>
+      </div>
+      <div class="card-info">
+        <div class="card-title">Dracena Variegata</div>
+        <div class="card-desc">Resistente e ideal para interiores.</div>
+        <div class="btn-row">
+          <button class="btn-details" onclick="openModal('dracena')">Ver Detalhes</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card: Rhizome -->
+    <div class="plant-card">
+      <div class="model-preview">
+        <model-viewer
+          src="assets/rhyzome_plant.glb"
+          auto-rotate
+          camera-controls
+          ar
+          ar-modes="scene-viewer webxr quick-look"
+          interaction-prompt="auto"
+          touch-action="pan-y"
+          ar-scale="auto"
+          ar-placement="floor"
+          enable-pan
+          shadow-intensity="1"
+          exposure="1.1"
+          environment-image="neutral">
+        </model-viewer>
+      </div>
+      <div class="card-info">
+        <div class="card-title">Rhizome Plant</div>
+        <div class="card-desc">Planta tropical de fácil cuidado.</div>
+        <div class="btn-row">
+          <button class="btn-details" onclick="openModal('rhizome')">Ver Detalhes</button>
+        </div>
+      </div>
+    </div>
+
+  </div> 
+
+  <!-- ==================== -->
+  <!-- FLORES & ORNAMENTAIS -->
+  <!-- ==================== -->
+  <div class="category-title">Flores & Ornamentais</div>
+  <div class="carousel-container">
+
+      <!-- Card: Orquídea -->
+      <div class="plant-card">
+        <div class="model-preview">
+          <model-viewer
+            src="assets/orchidea.glb"
+            auto-rotate
+            camera-controls
+            ar
+            ar-modes="scene-viewer webxr quick-look"
+            interaction-prompt="auto"
+            touch-action="pan-y"
+            ar-scale="auto"
+            ar-placement="floor"
+            enable-pan
+            shadow-intensity="1"
+            exposure="1.1"
+            environment-image="neutral"
+            scale="0.01 0.01 0.01">
+          </model-viewer>
+        </div>
+        <div class="card-info">
+          <div class="card-title">Orquídea Rosa</div>
+          <div class="card-desc">Delicadeza e sofisticação.</div>
+          <div class="btn-row">
+            <button class="btn-details" onclick="openModal('orchidea')">Ver Detalhes</button>
+          </div>
+        </div>
+      </div>
+
+    <!-- Card: Blanket Phlox -->
+    <div class="plant-card">
+      <div class="model-preview">
+        <model-viewer
+          src="assets/blanket_phlox.glb"
+          auto-rotate
+          camera-controls
+          ar
+          ar-modes="scene-viewer webxr quick-look"
+          interaction-prompt="auto"
+          touch-action="pan-y"
+          ar-scale="auto"
+          ar-placement="floor"
+          enable-pan
+          shadow-intensity="1"
+          exposure="1.1"
+          environment-image="neutral">
+        </model-viewer>
+      </div>
+      <div class="card-info">
+        <div class="card-title">Blanket Phlox</div>
+        <div class="card-desc">Planta rasteira muito ornamental.</div>
+        <div class="btn-row">
+          <button class="btn-details" onclick="openModal('phlox')">Ver Detalhes</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card: Lírios -->
+      <div class="plant-card">
+        <div class="model-preview">
+          <model-viewer
+            src="assets/flower_armeria.glb"
+            auto-rotate
+            camera-controls
+            ar
+            ar-modes="scene-viewer webxr quick-look"
+            interaction-prompt="auto"
+            touch-action="pan-y"
+            ar-scale="auto"
+            ar-placement="floor"
+            enable-pan
+            shadow-intensity="1"
+            exposure="1.1"
+            environment-image="neutral"
+            scale="0.02 0.02 0.02">
+          </model-viewer>
+        </div>
+        <div class="card-info">
+          <div class="card-title">Lírios</div>
+          <div class="card-desc">Pequena e resistente com flores rosa.</div>
+          <div class="btn-row">
+            <button class="btn-details" onclick="openModal('armeria')">Ver Detalhes</button>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <!-- ==================== -->
+  <!-- EXPERIÊNCIA AR -->
+  <!-- ==================== -->
+  <div class="category-title">🦋 3D Animados </div>
+  <div class="carousel-container">
+    <div class="plant-card">
+      <div class="model-preview">
+        <model-viewer src="assets/rosa.glb" auto-rotate camera-controls></model-viewer>
+      </div>
+      <div class="card-info">
+        <div class="card-title">Borboleta Azul (Polinizador)</div>
+        <div class="card-desc">Toque para ver a mágica acontecer na palma da sua mão.</div>
+        <div class="btn-row">
+          <button class="btn-ar" onclick="openCamera('oxygen')">Testar Agora ✨</button>
+        </div>
+      </div>
+    </div>
+    <div class="plant-card">
+      <div class="model-preview">
+        <model-viewer src="assets/oxygen.glb" auto-rotate camera-controls></model-viewer>
+      </div>
+      <div class="card-info">
+        <div class="card-title">Planta Alien (Fictícia)</div>
+        <div class="card-desc">Toque para ver a mágica acontecer na palma da sua mão.</div>
+        <div class="btn-row">
+          <button class="btn-ar" onclick="openCamera2('rosa')">Testar Agora ✨</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== -->
+  <!-- TUTORIAIS & INFO -->
+  <!-- ==================== -->
+  <div class="section-title">✨ Tutoriais & Créditos</div>
+  <div class="stories-container">
+
+    <!-- COMO USAR -->
+    <div class="story-item" onclick="showTip(
+      'Como Usar',
+      `
+      Na seção <strong> Experiência AR </strong> terão dois tipos de modelos<strong> Animados e Não Animados ✨</strong>.<br><br>
+      Na Seção 3D Animados, toque em Testar Agora e clique em premitir para acessar a câmera.<br><br>
+
+      <strong>🔹 Na visualização da plantas:</strong><br>
+      Clique no <strong>cubinho 3D</strong> (como na imagem abaixo) para entrar no modo de experiência das plantas 🌿.<br><br>
+
+      <img src='assets/verdetalhe.png' alt='Botão do cubo AR'
+      style='width:160px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.25); margin:8px 0;'><br>
+
+      <em>Esse botão aparece no canto inferior direito do modelo — ele abre a visualização em realidade aumentada onde permite o usuária a visualizar como ficaria os modelos no seu ambiente.</em>`)">
+      <div class="story-circle">
+        <img src="https://cdn-icons-png.flaticon.com/512/2659/2659360.png" alt="Tutorial">
+      </div>
+      <span class="story-text">Como Usar</span>
+    </div>
+
+    <!-- CONTROLES -->
+    <div class="story-item" onclick="showTip(
+  'Controles, Gestos e Animações',
+  `
+  <strong>🖐️ Interaja com as plantas em 3D:</strong><br><br>
+  <ul style='padding-left:18px; margin:0; text-align:left;'>
+    <li><strong>👌 Pinça (zoom com dois dedos):</strong> Aumente ou diminua o tamanho do modelo.</li>
+    <li><strong>🫱 Arrastar com um dedo:</strong> Gire o modelo para ver de outros ângulos.</li>
+    <li><strong>✋ Dois dedos:</strong> Mova o modelo pela tela ou reposicione-o.</li>
+    <li><strong>🔄 Girar dois dedos:</strong> Rotacione o modelo em torno do eixo.</li>
+    <li><strong>👆 Toque longo:</strong> Reposicione o modelo no espaço AR.</li>
+  </ul>
+  <br>
+  <strong>🎞️ Sobre os modelos animados:</strong><br>
+  No modo AR, a câmera usa <strong>visão computacional</strong> para <strong>reconhecer sua mão em tempo real</strong> 🖐️.<br><br>
+  Ao <strong>aproximar o dedo indicador do polegar</strong>, o sistema mede essa distância e <strong>diminui a escala</strong>.<br>
+  Ao <strong>afastar os dois dedos</strong>, o modelo cresce, como se florescesse em sua palma 🦋.<br><br>
+  <ul style='padding-left:18px; margin-top:6px; text-align:left;'>
+    <li><strong>📍 Fixar Posição:</strong> O botão “Fixar” prende o modelo no espaço, permitindo mover a mão livremente.</li>
+    <li><strong>⏸️ Pausar:</strong> Interrompe a animação atual.</li>
+    <li><strong>⚡ Velocidade:</strong> Ajuste o ritmo da animação.</li>
+  </ul>
+  <br>
+  <em>Dica:</em> Mantenha a mão centralizada e bem iluminada para melhor rastreamento 💡.
+  `
+)">
+      <div class="story-circle">
+        <img src="https://cdn-icons-png.flaticon.com/512/5695/5695669.png" alt="Controles e Gestos">
+      </div>
+      <span class="story-text">Controles</span>
+    </div>
+
+    <!-- CRÉDITOS -->
+    <div class="story-item" onclick="openCredits()">
+      <div class="story-circle" style="border-color:#ffc107;">
+        <img src="https://cdn-icons-png.flaticon.com/512/15466/15466060.png" alt="Créditos">
+      </div>
+      <span class="story-text">Créditos</span>
+    </div>
+  </div>
+
+  <!-- ==================== -->
+  <!-- MODAIS -->
+  <!-- ==================== -->
+  <div id="genericModal" class="modal-overlay">
+    <div class="details-box">
+      <h3 id="mTitle"></h3>
+      <p id="mDesc"></p>
+      <div id="mBenefits" style="margin-top:10px;color:#555;font-size:0.9rem;"></div>
+      <button class="close-modal" onclick="closeModal()">Fechar</button>
+    </div>
+  </div>
+
+  <div id="tipsModal" class="modal-overlay">
+    <div class="details-box">
+      <h3 id="tTitle"></h3>
+      <p id="tContent"></p>
+      <button class="close-modal" onclick="closeTips()">Fechar</button>
+    </div>
+  </div>
+
+    <div id="creditsModal" class="modal-overlay">
+    <div class="details-box">
+      <h3>Créditos dos Modelos 3D</h3>
+      <ul style="list-style:none;padding-left:0;font-size:0.9rem;color:#555;">
+        <li>🌿 <strong>Monstera</strong> – <a href="https://sketchfab.com/3d-models/monstera-deliciosa-potted-mid-century-plant-1ab9bf841df04c07b1819be596327629" target="_blank">Giora</a></li>
+        <li>🌱 <strong>Dracena</strong> – <a href="https://sketchfab.com/3d-models/indoor-plant-7c5e77d572c848458e5d898ac49f6f27" target="_blank">Malek Almsri</a></li>
+        <li>🌸 <strong>Blanket Phlox</strong> – <a href="https://sketchfab.com/3d-models/blanket-phlox-69bf5e21f767419dafec910f7a6be799" target="_blank">eb78</a></li>
+        <li>🌾 <strong>Rhizome</strong> – <a href="https://sketchfab.com/3d-models/rhyzome-plant-7191a1b935ac452987866573713e4da5" target="_blank">Blizzy</a></li>
+        <li>🌼 <strong>Lírios</strong> – <a href="https://sketchfab.com/3d-models/flower-model-v001-351d63de2833444ab94f98ce1a7c239c" target="_blank">Kiem Truong</a></li>
+        <li>💮 <strong>Orquídea</strong> – <a href="https://sketchfab.com/3d-models/orchidea-9e351f19b3ba4910b7d15954e49ae178" target="_blank">Antonio Rossini</a></li>
+        <li>🦋 <strong>Borboleta Azul</strong> – <a href="https://sketchfab.com/3d-models/ulysses-butterfly-1155effb97564974aa0553db3d5eed57" target="_blank">Ulysses Butterfly (Animated)</a></li>
+        <li>👽 <strong>Planta Alien</strong> – <a href="https://sketchfab.com/3d-models/sick-alien-plant-8282241e29854855823ced065cb8a661" target="_blank">Nabarun1011</a></li>
+      </ul>
+
+      <p><strong>Desenvolvido por Jade Paz 👩‍💻</strong><br><small>Venha conhecer mais sobre meus trabalhos👇</small></p>
+      <a href="https://jadeprog.github.io/site" target="_blank">🌐 Portfólio</a><br><br>
+      <button class="close-modal" onclick="closeCredits()">Fechar</button>
+    </div>
+  </div>
+
+  <footer>
+     ©Jade Paz</a>
+  </footer>
+
+  <script>
+   const plantInfo = {
+  'rosa': { 
+    title: 'Rosa Clássica', 
+    desc: `
+      A rainha das flores, símbolo de paixão e beleza.
+    `, 
+    benefits: `
+      • <strong>Ambiente Ideal:</strong> Jardins, varandas com sol pleno.<br>
+      • <strong>Luz:</strong> Sol pleno (mínimo 6 horas/dia).<br>
+      • <strong>Rega:</strong> Frequente, mantendo o solo úmido, mas não encharcado.<br>
+      • <strong>Impacto:</strong> Perfume marcante e decoração romântica.
+    ` 
+  },
+
+  'monstera': { 
+    title: 'Costela-de-Adão (Monstera Deliciosa)', 
+    desc: `
+      Planta tropical elegante, famosa por suas folhas grandes e recortadas.
+    `, 
+    benefits: `
+      • <strong>Ambiente Ideal:</strong> Salas de estar, escritórios (luz indireta).<br>
+      • <strong>Luz:</strong> Luz indireta brilhante. Evitar sol direto.<br>
+      • <strong>Rega:</strong> Moderada. Deixe o solo secar entre as regas.<br>
+      • <strong>Impacto:</strong> Purifica o ar, remove toxinas e traz decoração moderna.
+    ` 
+  },
+
+  'dracena': { 
+    title: 'Dracena Variegata', 
+    desc: `
+      Resistente e de fácil cuidado, ideal para iniciantes no cultivo.
+    `, 
+    benefits: `
+      • <strong>Ambiente Ideal:</strong> Quartos e corredores (tolera pouca luz).<br>
+      • <strong>Luz:</strong> Luz indireta a sombra parcial.<br>
+      • <strong>Rega:</strong> Baixa. Regar apenas quando o solo estiver seco.<br>
+      • <strong>Impacto:</strong> Purifica toxinas como formaldeído e é muito resistente.
+    ` 
+  },
+
+  'phlox': { 
+    title: 'Blanket Phlox', 
+    desc: `
+      Planta rasteira ornamental com flores vibrantes, excelente para cobertura de solo.
+    `, 
+    benefits: `
+      • <strong>Ambiente Ideal:</strong> Canteiros, jardins de pedra e áreas externas.<br>
+      • <strong>Luz:</strong> Sol pleno.<br>
+      • <strong>Rega:</strong> Moderada a baixa. Resistente à seca após estabelecida.<br>
+      • <strong>Impacto:</strong> Cobre superfícies e atrai polinizadores.
+    ` 
+  },
+
+  'rhizome': { 
+    title: 'Rhizome Plant (Zamioculcas)', 
+    desc: `
+      Planta tropical extremamente resistente, ideal para quem esquece de regar.
+    `, 
+    benefits: `
+      • <strong>Ambiente Ideal:</strong> Banheiros, cozinhas e locais com pouca luz.<br>
+      • <strong>Luz:</strong> Luz indireta baixa a média.<br>
+      • <strong>Rega:</strong> Muito baixa. Regar a cada 2–4 semanas.<br>
+      • <strong>Impacto:</strong> Traz frescor e tolera longos períodos sem cuidados.
+    ` 
+  },
+
+  'armeria': { 
+    title: 'Armeria Marítima (Lírios)', 
+    desc: `
+      Pequena e resistente, com flores delicadas em formato de pompom.
+    `, 
+    benefits: `
+      • <strong>Ambiente Ideal:</strong> Vasos, jardins e áreas costeiras.<br>
+      • <strong>Luz:</strong> Sol pleno a parcial.<br>
+      • <strong>Rega:</strong> Moderada.<br>
+      • <strong>Impacto:</strong> Resistente ao calor e maresia, trazendo leveza ao ambiente.
+    ` 
+  },
+
+  'orchidea': { 
+    title: 'Orquídea Rosa (Phalaenopsis)', 
+    desc: `
+      Uma das orquídeas mais populares, símbolo de beleza, força e delicadeza.
+    `, 
+    benefits: `
+      • <strong>Ambiente Ideal:</strong> Salas, mesas e aparadores com luz indireta.<br>
+      • <strong>Luz:</strong> Indireta brilhante; ideal perto de janelas voltadas ao leste.<br>
+      • <strong>Rega:</strong> Moderada. Regar quando o substrato estiver quase seco.<br>
+      • <strong>Impacto:</strong> Decoração refinada, traz serenidade e é ótimo presente.
+    ` 
+  }
+};
+
+    function openModal(plantKey) {
+      const data = plantInfo[plantKey];
+      if (data) {
+        document.getElementById('mTitle').innerText = data.title;
+        document.getElementById('mDesc').innerText = data.desc;
+        document.getElementById('mBenefits').innerHTML = '<strong>Benefícios:</strong><br>' + data.benefits;
+        document.getElementById('genericModal').style.display = 'flex';
+      }
+    }
+
+    function closeModal() { document.getElementById('genericModal').style.display = 'none'; }
+    function showTip(title, html) {
+      document.getElementById('tTitle').innerText = title;
+      document.getElementById('tContent').innerHTML = html;
+      document.getElementById('tipsModal').style.display = 'flex';
+    }
+    function closeTips() { document.getElementById('tipsModal').style.display = 'none'; }
+    function openCredits() { document.getElementById('creditsModal').style.display = 'flex'; }
+    function closeCredits() { document.getElementById('creditsModal').style.display = 'none'; }
+    function openCamera(plantName) { window.location.href = `camera.html?plant=${plantName}`; }
+    function openCamera2(plantName) { window.location.href = `camera2.html?plant=${plantName}`; }
+  </script>
+
+</body>
+</html>
